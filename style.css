@@ -1,0 +1,40 @@
+body {
+    background-color: rgb(194, 193, 193);
+    margin:0;
+}
+
+#container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    margin:0;
+}
+
+#upgrades {
+    background-color: cornflowerblue;
+    height: 7vh;
+    border-radius: 3px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+#result {
+    font-weight: 600;
+}
+
+#totalCost {
+    margin-top: 5px;
+}
+
+
+@media screen and (min-width : 768px) {
+    #upgrades {
+        width: 50vw;
+    }
+}
+
+@media screen and (min-width : 1200px) {
+    #upgrades {
+        width: 25vw;
+    }
+}

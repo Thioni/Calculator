@@ -9,13 +9,18 @@
 </head>
 
 <body>
-    <div>
+  <div id="container">
+    <div id="upgrades">
+        <div>Coût 100 de base + 100 par upgrade</div>
         <label>Nombre d'upgrades: </label>
         <input id="tries"></input>
+          <div id="totalCost">
+            <span> Coût total: </span>
+            <span id="result"> 100 </span>
+          </div>
     </div>
+  </div>
 
-    <span> Coût total: </span>
-    <span id="result"> 100 </span>
 
   <script src="app.js"></script>
 
