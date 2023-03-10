@@ -3,38 +3,67 @@ body {
     margin:0;
 }
 
-#container {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    margin:0;
+#calc1 {
+    grid-area: calc1;
 }
 
-#upgrades {
-    background-color: cornflowerblue;
-    height: 7vh;
-    border-radius: 3px;
-    margin-top: 10px;
+#calc2 {
+    grid-area: calc2;
+}
+
+.container {    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "#calc1 #calc1 #calc1"
+        "#calc2 #calc2 #calc2";
+}
+
+h1 {
     text-align: center;
+    margin-bottom: 50px;
 }
 
-#result {
+#result, #resultSelect {
     font-weight: 600;
 }
 
-#totalCost {
+.statement {
+    background-color: black;
+    color: aliceblue;
+    border-radius: 3px;
+}
+
+#totalCost, #selectCost {
     margin-top: 5px;
 }
 
+.upgrades {
+    background-color: cornflowerblue;
+    border-radius: 3px;
+    margin: 2px;
+    text-align: center;
+}
 
-@media screen and (min-width : 768px) {
-    #upgrades {
-        width: 50vw;
+@media screen and (min-width : 600px) {
+    .container {    
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas: 
+            ". calc1 calc1 calc1 ."
+            ". calc2 calc2 calc2 .";
     }
 }
 
-@media screen and (min-width : 1200px) {
-    #upgrades {
-        width: 25vw;
+
+@media screen and (min-width : 900px) {
+    .container {    
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas: 
+            ". calc1 calc1 calc1 . calc2 calc2 calc2 .";
     }
 }

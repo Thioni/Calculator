@@ -9,18 +9,31 @@
 </head>
 
 <body>
-  <div id="container">
-    <div id="upgrades">
-        <div>Coût 100 de base + 100 par upgrade</div>
+  <h1>SKILL COST CALCULATOR</h1>
+  <div class="container">
+    <div class="upgrades" id="calc1">
+        <div class="statement">Coût 100 de base + 100 par upgrade</div>
         <label>Nombre d'upgrades: </label>
         <input id="tries"></input>
           <div id="totalCost">
-            <span> Coût total: </span>
+            <span id="test"> Coût total: </span>
             <span id="result"> 100 </span>
           </div>
     </div>
-  </div>
 
+    <div class="upgrades" id="calc2">
+        <div class="statement">Coût pour une tranche donnée</div>
+        <label>Point de départ: </label>
+        <input id="startingTry" value="1"></input>
+        <label>Fin: </label>
+        <input id="endingTry" value="2"></input>
+        <button id="calculateSelection" type="button">Calculer</button>
+          <div id="selectCost">
+            <span> Coût total: </span>
+            <span id="resultSelect"> 0 </span>
+          </div>
+    </div>
+  </div>
 
   <script src="app.js"></script>
 
