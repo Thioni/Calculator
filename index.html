@@ -11,13 +11,18 @@
 <body>
   <h1>SKILL COST CALCULATOR</h1>
   <div class="container">
+    <div class="upgrades" id="cost">
+      <div class="statement">Coût de base</div>
+      <input id="baseCost" value="10"></input>
+      <button id="defineCost" type="button">Modifier</button>
+    </div>
     <div class="upgrades" id="calc1">
-        <div class="statement">Coût 100 de base + 100 par upgrade</div>
+        <div class="statement" id="costStatement">Coût de base 10 + 10 par upgrade</div>
         <label>Nombre d'upgrades: </label>
         <input id="tries"></input>
           <div id="totalCost">
             <span id="test"> Coût total: </span>
-            <span id="result"> 100 </span>
+            <span id="result"> 0 </span>
           </div>
     </div>
 

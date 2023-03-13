@@ -11,13 +11,18 @@ body {
     grid-area: calc2;
 }
 
+#cost {
+    grid-area: cost;
+}
+
 .container {    
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
     grid-template-areas: 
-        "#calc1 #calc1 #calc1"
-        "#calc2 #calc2 #calc2";
+        ". cost ."
+        "calc1 calc1 calc1"
+        "calc2 calc2 calc2";
 }
 
 h1 {
@@ -52,6 +57,7 @@ h1 {
         grid-template-columns: repeat(5, 1fr);
         grid-template-rows: auto;
         grid-template-areas: 
+            ". . cost . ."
             ". calc1 calc1 calc1 ."
             ". calc2 calc2 calc2 .";
     }
@@ -64,6 +70,7 @@ h1 {
         grid-template-columns: repeat(9, 1fr);
         grid-template-rows: auto;
         grid-template-areas: 
+            ". . . . cost . . . ."
             ". calc1 calc1 calc1 . calc2 calc2 calc2 .";
     }
 }
