@@ -11,6 +11,7 @@
 <body>
   <h1>SKILL COST CALCULATOR</h1>
   <div class="container">
+
     <div class="upgrades" id="cost">
       <div class="statement">Coût de base</div>
       <input id="baseCost" value="10"></input>
@@ -38,6 +39,16 @@
             <span id="resultSelect"> 0 </span>
           </div>
     </div>
+
+    <!-- Modal -->
+    
+    <div id="costModal" class="modal">      
+      <div class="modal-content">
+        <span id="closeModal">&times;</span>
+        <p>Coût modifié</p>
+      </div>    
+    </div> 
+
   </div>
 
   <script src="app.js"></script>

@@ -20,7 +20,7 @@ body {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
     grid-template-areas: 
-        ". cost ."
+        ". cost modal"
         "calc1 calc1 calc1"
         "calc2 calc2 calc2";
 }
@@ -57,7 +57,7 @@ h1 {
         grid-template-columns: repeat(5, 1fr);
         grid-template-rows: auto;
         grid-template-areas: 
-            ". . cost . ."
+            ". . cost modal ."
             ". calc1 calc1 calc1 ."
             ". calc2 calc2 calc2 .";
     }
@@ -71,6 +71,34 @@ h1 {
         grid-template-rows: auto;
         grid-template-areas: 
             ". . . . cost . . . ."
-            ". calc1 calc1 calc1 . calc2 calc2 calc2 .";
+            ". calc1 calc1 calc1 modal calc2 calc2 calc2 .";
     }
 }
+
+
+ /* Modal testing */
+
+ .modal {
+    display: none;
+    background-color: rgba(216, 91, 19, 0.904);
+    grid-area: modal;
+  }
+  
+  .modal-content {
+    color: white;
+    text-align: center;
+  }
+  
+  #closeModal {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  #closeModal:hover,
+  #closeModal:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  } 

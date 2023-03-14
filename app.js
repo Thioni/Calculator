@@ -8,6 +8,7 @@ function changeCost() {
   costStatement.textContent = `Coût de base ${baseInput} + ${baseInput} par upgrade`
   calculateSpent();
   calculateSelect();
+  modal.style.display = "block";
 }
 
 defineCost.addEventListener('click', function() {
@@ -52,3 +53,18 @@ function calculateSelect() {
 calculateSelection.addEventListener('click', function() {
   calculateSelect();
 });
+
+// Modal testing
+
+let modal = document.getElementById("costModal");
+let closeModal = document.getElementById("closeModal");
+
+closeModal.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
