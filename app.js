@@ -64,7 +64,7 @@ closeModal.onclick = function() {
 }
 
 window.onclick = function(event) {
-  if (event.target == modal) {
+  if (event.target == modal || event.target.tagName.toLowerCase() == "input" ) {
     modal.style.display = "none";
   }
 }
