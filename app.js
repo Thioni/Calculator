@@ -57,11 +57,11 @@ calculateSelection.addEventListener('click', function() {
 // Modal testing
 
 let modal = document.getElementById("costModal");
-let closeModal = document.getElementById("closeModal");
+// let closeModal = document.getElementById("closeModal");
 
-closeModal.onclick = function() {
-  modal.style.display = "none";
-}
+// closeModal.onclick = function() {
+//   modal.style.display = "none";
+// }
 
 window.onclick = function(event) {
   if (event.target == modal || event.target.tagName.toLowerCase() == "input" ) {

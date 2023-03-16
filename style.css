@@ -51,6 +51,39 @@ h1 {
     text-align: center;
 }
 
+.upgrades input {
+    text-align: center;
+}
+
+/* Modal */
+
+#costModal {
+   display: none;
+   background-color: rgba(216, 91, 19, 0.904);
+   grid-area: modal;
+ }
+ 
+ .modal-content {
+   color: white;
+   display: flex;
+   justify-content: center;
+   margin-top: 5px;
+ }
+ 
+ #closeModal {
+   color: #000000;
+   font-size: 28px;
+   font-weight: bold;
+   text-align: center;
+ }
+ 
+ #closeModal:hover,
+ #closeModal:focus {
+   color: black;
+   text-decoration: none;
+   cursor: pointer;
+ } 
+ 
 @media screen and (min-width : 600px) {
     .container {    
         display: grid;
@@ -63,8 +96,7 @@ h1 {
     }
 }
 
-
-@media screen and (min-width : 900px) {
+@media screen and (min-width : 1512px) {
     .container {    
         display: grid;
         grid-template-columns: repeat(9, 1fr);
@@ -74,31 +106,3 @@ h1 {
             ". calc1 calc1 calc1 modal calc2 calc2 calc2 .";
     }
 }
-
-
- /* Modal testing */
-
- #costModal {
-    display: none;
-    background-color: rgba(216, 91, 19, 0.904);
-    grid-area: modal;
-  }
-  
-  .modal-content {
-    color: white;
-    text-align: center;
-  }
-  
-  #closeModal {
-    color: #000000;
-    font-size: 28px;
-    font-weight: bold;
-    text-align: center;
-  }
-  
-  #closeModal:hover,
-  #closeModal:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-  } 
