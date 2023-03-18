@@ -3,6 +3,10 @@ body {
     margin:0;
 }
 
+#calculateCraftCost {
+    grid-area: calculateCraftCost;
+}
+
 #calc1 {
     grid-area: calc1;
 }
@@ -15,6 +19,31 @@ body {
     grid-area: cost;
 }
 
+#craft {
+    grid-area: craft;
+    display: grid;
+    width: auto;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+    "craftTitle craftTitle craftTitle craftTitle craftTitle" 
+    "iCellOne iCellOne iCellOne iCellOne iCellOne"
+    "iCellTwo iCellTwo iCellTwo iCellTwo iCellTwo"
+    "iCellThree iCellThree iCellThree iCellThree iCellThree"
+    "iBudget iBudget iBudget iBudget iBudget"
+    ". . calculateCraftCost . ."
+    ". craftResult craftResult craftResult .";
+}
+
+#craftTitle {
+    grid-area: craftTitle;
+}
+
+#craftResult {
+    grid-area: craftResult;
+}
+
+
 .container {    
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -22,12 +51,41 @@ body {
     grid-template-areas: 
         ". cost modal"
         "calc1 calc1 calc1"
-        "calc2 calc2 calc2";
+        "calc2 calc2 calc2"
+        "craft craft craft";
 }
 
 h1 {
     text-align: center;
     margin-bottom: 50px;
+}
+
+#iBudget {
+    grid-area: iBudget;
+}
+
+#iCellOne {
+    grid-area: iCellOne;
+}
+
+#iCellTwo {
+    grid-area: iCellTwo;
+}
+
+#iCellThree {
+    grid-area: iCellThree;
+}
+
+#ingredientTwoValue {
+    grid-area: ingredientTwoValue;
+}
+
+#ingredientThreeValue {
+    grid-area: ingredientThreeValue;
+}
+
+#ingredientBudget {
+    grid-area: ingredientBudget;
 }
 
 #result, #resultSelect {
@@ -92,7 +150,8 @@ h1 {
         grid-template-areas: 
             ". . cost modal ."
             ". calc1 calc1 calc1 ."
-            ". calc2 calc2 calc2 .";
+            ". calc2 calc2 calc2 ."
+            ". craft craft craft .";
     }
 }
 
@@ -103,6 +162,43 @@ h1 {
         grid-template-rows: auto;
         grid-template-areas: 
             ". . . . cost . . . ."
-            ". calc1 calc1 calc1 modal calc2 calc2 calc2 .";
+            ". calc1 calc1 calc1 modal calc2 calc2 calc2 ."
+            ". . craft craft craft craft craft . .";
+    }
+}
+
+@media screen and (min-width : 600px) {
+    #craft {
+        grid-area: craft;
+        display: grid;
+        width: auto;
+        grid-template-columns: repeat(9, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas:
+        "craftTitle craftTitle craftTitle craftTitle craftTitle craftTitle craftTitle craftTitle craftTitle" 
+        ". . iCellOne iCellOne iCellOne iCellOne iCellOne . . "
+        ". . iCellTwo iCellTwo iCellTwo iCellTwo iCellTwo . ."
+        ". . iCellThree iCellThree iCellThree iCellThree iCellThree . ."
+        ". . iBudget iBudget iBudget iBudget iBudget . ."
+        ". . . . calculateCraftCost . . . ."
+        ". . . craftResult craftResult craftResult . . .";
+    }
+}
+
+@media screen and (min-width : 1512px) {
+    #craft {
+        grid-area: craft;
+        display: grid;
+        width: 50vw;
+        grid-template-columns: repeat(9, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas:
+        "craftTitle craftTitle craftTitle craftTitle craftTitle craftTitle craftTitle craftTitle craftTitle" 
+        ". . . iCellOne iCellOne iCellOne . . ."
+        ". . . iCellTwo iCellTwo iCellTwo . . ."
+        ". . . iCellThree iCellThree iCellThree . . ."
+        ". . . iBudget iBudget iBudget . . ."
+        ". . . . calculateCraftCost . . . ."
+        ". . . craftResult craftResult craftResult . . .";
     }
 }
