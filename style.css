@@ -48,7 +48,8 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
-    grid-template-areas: 
+    grid-template-areas:
+        "navbar navbar navbar" 
         ". cost modal"
         "calc1 calc1 calc1"
         "calc2 calc2 calc2"
@@ -87,6 +88,33 @@ h1 {
 #ingredientBudget {
     grid-area: ingredientBudget;
 }
+
+#navbar {
+    grid-area: navbar;
+    height: 30px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas:
+        ". indexNav tocsNav . . . . . . . . ."
+
+}
+
+ /* Temporaire ------------------------------------------- */
+
+#indexNav {
+    grid-area: indexNav;
+    font-weight: bold;
+}
+
+#tocsNav {
+    grid-area: tocsNav;
+    color: dimgray;
+}
+
+/* Fin temporaire ------------------------------------------- */
 
 #result, #resultSelect {
     font-weight: 600;
@@ -147,27 +175,14 @@ h1 {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
         grid-template-rows: auto;
-        grid-template-areas: 
+        grid-template-areas:
+            "navbar navbar navbar navbar navbar"  
             ". . cost modal ."
             ". calc1 calc1 calc1 ."
             ". calc2 calc2 calc2 ."
             ". craft craft craft .";
     }
-}
 
-@media screen and (min-width : 1512px) {
-    .container {    
-        display: grid;
-        grid-template-columns: repeat(9, 1fr);
-        grid-template-rows: auto;
-        grid-template-areas: 
-            ". . . . cost . . . ."
-            ". calc1 calc1 calc1 modal calc2 calc2 calc2 ."
-            ". . craft craft craft craft craft . .";
-    }
-}
-
-@media screen and (min-width : 600px) {
     #craft {
         grid-area: craft;
         display: grid;
@@ -186,6 +201,17 @@ h1 {
 }
 
 @media screen and (min-width : 1512px) {
+    .container {    
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas:
+            "navbar navbar navbar navbar navbar navbar navbar navbar navbar" 
+            ". . . . cost . . . ."
+            ". calc1 calc1 calc1 modal calc2 calc2 calc2 ."
+            ". . craft craft craft craft craft . .";
+    }
+
     #craft {
         grid-area: craft;
         display: grid;

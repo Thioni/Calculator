@@ -9,73 +9,78 @@
 </head>
 
 <body>
-  <h1>SKILL COST CALCULATOR</h1>
-  <div class="container">
+    <h1>SKILL COST CALCULATOR</h1>
+    <div class="container">
 
-    <div class="upgrades" id="cost">
-      <div class="statement">Coût de base</div>
-      <input id="baseCost" value="10"></input>
-      <button id="defineCost" type="button">Modifier</button>
-    </div>
-    <div class="upgrades" id="calc1">
-        <div class="statement" id="costStatement">Coût de base 10 + 10 par upgrade</div>
-        <label>Nombre d'upgrades: </label>
-        <input id="tries"></input>
-          <div id="totalCost">
-            <span> Coût total: </span>
-            <span id="result"> 0 </span>
+      <div id="navbar">
+        <span id="indexNav">Index</span>
+        <span id="tocsNav">Trails</span>
+      </div>
+
+      <div class="upgrades" id="cost">
+        <div class="statement">Coût de base</div>
+        <input id="baseCost" value="10"></input>
+        <button id="defineCost" type="button">Modifier</button>
+      </div>
+      <div class="upgrades" id="calc1">
+          <div class="statement" id="costStatement">Coût de base 10 + 10 par upgrade</div>
+          <label>Nombre d'upgrades: </label>
+          <input id="tries"></input>
+            <div id="totalCost">
+              <span> Coût total: </span>
+              <span id="result"> 0 </span>
+            </div>
+      </div>
+
+      <div class="upgrades" id="calc2">
+          <div class="statement">Coût pour une tranche donnée</div>
+          <label>Point de départ: </label>
+          <input id="startingTry" value="1"></input>
+          <label>Fin: </label>
+          <input id="endingTry" value="2"></input>
+          <button id="calculateSelection" type="button">Calculer</button>
+            <div id="selectCost">
+              <span> Coût total: </span>
+              <span id="resultSelect"> 0 </span>
+            </div>
+      </div>
+
+      <div class="upgrades" id="craft">
+          <div id="craftTitle" class="statement">Coût pour une tranche donnée</div>
+          <div id="iCellOne">
+            <label>Ingredient 1: </label>
+            <input id="ingredientOneValue" value="10"></input>
           </div>
-    </div>
-
-    <div class="upgrades" id="calc2">
-        <div class="statement">Coût pour une tranche donnée</div>
-        <label>Point de départ: </label>
-        <input id="startingTry" value="1"></input>
-        <label>Fin: </label>
-        <input id="endingTry" value="2"></input>
-        <button id="calculateSelection" type="button">Calculer</button>
-          <div id="selectCost">
-            <span> Coût total: </span>
+          <div id="iCellTwo">
+            <label>Ingredient 2: </label>
+            <input id="ingredientTwoValue" value="20"></input>
+          </div>
+          <div id="iCellThree">
+            <label>Ingredient 3: </label>
+            <input id="ingredientThreeValue" value="40"></input>
+          </div>
+          <div id="iBudget">
+            <label>Budget: </label>
+            <input id="ingredientBudget" value="40"></input>
+          </div>
+          <button id="calculateCraftCost" type="button">Calculer</button>
+          <div id="craftResult">
+            <span> Production totale: </span>
             <span id="resultSelect"> 0 </span>
           </div>
-    </div>
+      </div>
 
-    <div class="upgrades" id="craft">
-        <div id="craftTitle" class="statement">Coût pour une tranche donnée</div>
-        <div id="iCellOne">
-          <label>Ingredient 1: </label>
-          <input id="ingredientOneValue" value="10"></input>
-        </div>
-        <div id="iCellTwo">
-          <label>Ingredient 2: </label>
-          <input id="ingredientTwoValue" value="20"></input>
-        </div>
-        <div id="iCellThree">
-          <label>Ingredient 3: </label>
-          <input id="ingredientThreeValue" value="40"></input>
-        </div>
-        <div id="iBudget">
-          <label>Budget: </label>
-          <input id="ingredientBudget" value="40"></input>
-        </div>
-        <button id="calculateCraftCost" type="button">Calculer</button>
-        <div id="craftResult">
-          <span> Production totale: </span>
-          <span id="resultSelect"> 0 </span>
-        </div>
-    </div>
-
- 
-    <!-- Modal -->
     
-    <div id="costModal" class="modal">      
-      <div class="modal-content">
-        <p>COÛT MODIFIÉ</p>
-        <!-- <span id="closeModal">&times;</span> -->
-      </div>    
-    </div> 
+      <!-- Modal -->
 
-  </div>
+      <div id="costModal" class="modal">      
+        <div class="modal-content">
+          <p>COÛT MODIFIÉ</p>
+          <!-- <span id="closeModal">&times;</span> -->
+        </div>    
+      </div> 
+
+    </div>
 
   <script src="app.js"></script>
 
