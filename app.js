@@ -54,6 +54,14 @@ calculateSelection.addEventListener('click', function() {
   calculateSelect();
 });
 
+// Navbar testing
+
+let tocsNav = document.getElementById("tocsNav");
+
+tocsNav.onclick = function(event) {
+  location.href = "tocs3.html";
+  }
+
 // Modal testing
 
 let modal = document.getElementById("costModal");

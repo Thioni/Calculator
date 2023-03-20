@@ -63,6 +63,7 @@ h1 {
 
 #iBudget {
     grid-area: iBudget;
+    margin-left: 7vw;
 }
 
 #iCellOne {
@@ -198,6 +199,10 @@ h1 {
         ". . . . calculateCraftCost . . . ."
         ". . . craftResult craftResult craftResult . . .";
     }
+
+    #iBudget {
+        margin-left: 4.5vw;
+    }
 }
 
 @media screen and (min-width : 1512px) {
@@ -226,5 +231,9 @@ h1 {
         ". . . iBudget iBudget iBudget . . ."
         ". . . . calculateCraftCost . . . ."
         ". . . craftResult craftResult craftResult . . .";
+    }
+
+    #iBudget {
+        margin-left: 1.6vw;
     }
 }
