@@ -56,6 +56,7 @@ calculateSelection.addEventListener('click', function() {
 
 // Navbar testing
 
+let navbarElements = navbar.children;
 let tocsNav = document.getElementById("tocsNav");
 
 tocsNav.onclick = function(event) {
