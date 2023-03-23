@@ -17,27 +17,27 @@
         <span id="tocsNav" class="inactive">Trails</span>
       </nav>
 
-      <div class="upgrades" id="cost">
+      <div class="calcSection" id="cost">
         <div class="statement">Coût de base</div>
-        <input id="baseCost" value="10"></input>
+        <input type="number" id="baseCost" name="baseCost" value="10"></input>
         <button id="defineCost" type="button">Modifier</button>
       </div>
-      <div class="upgrades" id="calc1">
+      <div class="calcSection" id="calc1">
           <div class="statement" id="costStatement">Coût de base 10 + 10 par upgrade</div>
-          <label>Nombre d'upgrades: </label>
-          <input id="tries"></input>
+          <label for="tries">Nombre d'upgrades: </label>
+          <input id="tries" name="tries"></input>
             <div id="totalCost">
               <span> Coût total: </span>
               <span id="result"> 0 </span>
             </div>
       </div>
 
-      <div class="upgrades" id="calc2">
+      <div class="calcSection" id="calc2">
           <div class="statement">Coût pour une tranche donnée</div>
-          <label>Point de départ: </label>
-          <input id="startingTry" value="1"></input>
-          <label>Fin: </label>
-          <input id="endingTry" value="2"></input>
+          <label for="startingTry">Point de départ: </label>
+          <input type="number" id="startingTry" name="startingTry" value="1"></input>
+          <label for="endingTry">Fin: </label>
+          <input type="number" id="endingTry" name="endingTry" value="2"></input>
           <button id="calculateSelection" type="button">Calculer</button>
             <div id="selectCost">
               <span> Coût total: </span>
@@ -50,7 +50,6 @@
       <div id="costModal" class="modal">      
         <div class="modal-content">
           <p>COÛT MODIFIÉ</p>
-          <!-- <span id="closeModal">&times;</span> -->
         </div>    
       </div> 
 

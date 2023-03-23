@@ -10,37 +10,50 @@
 
 <body>
     <h1>CRAFT COST CALCULATOR</h1>
-    <div class="container">
+    <div class="container" id="test">
 
         <div id="navbar">
             <span id="indexNav" class="inactive">Index</span>
             <span id="tocsNav" class="active">Trails</span>
         </div>
 
-        <div class="upgrades" id="craft">
-            <div id="craftTitle" class="statement">Coût pour une tranche donnée</div>
+        <form class="calcSection" id="craft">
+            <div id="craftTitle" class="statement">Production maximale</div>
             <div id="iCellOne">
-              <label>Ingredient 1: </label>
-              <input id="ingredientOneValue" value="10"></input>
+              <label for="costA">Ingredient 1: </label>
+              <input type="number" id="costA" name="costA" value="10"></input>
             </div>
             <div id="iCellTwo">
-              <label>Ingredient 2: </label>
-              <input id="ingredientTwoValue" value="20"></input>
+              <label for="costB">Ingredient 2: </label>
+              <input type="number" id="costB" name="costB" value="20"></input>
             </div>
             <div id="iCellThree">
-              <label>Ingredient 3: </label>
-              <input id="ingredientThreeValue" value="40"></input>
+              <label for="costC">Ingredient 3: </label>
+              <input type="number" id="costC" name="costC" value="40"></input>
             </div>
             <div id="iBudget">
-              <label>Budget: </label>
-              <input id="ingredientBudget" value="40"></input>
+              <label for="totalBudget">Budget: </label>
+              <input type="number" id="totalBudget" name="totalBudget" value="1000"></input>
             </div>
-            <button id="calculateCraftCost" type="button">Calculer</button>
+            <button id="prodButton" type="button">Calculer</button>
             <div id="craftResult">
-              <span> Production totale: </span>
-              <span id="resultSelect"> 0 </span>
+              <span> Production possible: </span>
+              <span id="possibleProd"> 0 </span>
             </div>
-        </div>
+        </form>
+
+
+        <!-- <form class="calcSection" id="test">
+          <div id="craftTitle" class="statement">Production maximale</div>
+          <label for="costA">Coût de l'ingrédient A :</label>
+          <input type="number" id="costA" name="costA" required><br>
+            
+          <label for="budget">Budget total :</label>
+          <input type="number" id="budget" name="budget" required><br>
+      
+          <button type="submit">Calculer</button>
+        </form> -->
+
         
     </div>
 

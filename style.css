@@ -3,10 +3,6 @@ body {
     margin:0;
 }
 
-#calculateCraftCost {
-    grid-area: calculateCraftCost;
-}
-
 #calc1 {
     grid-area: calc1;
 }
@@ -24,11 +20,11 @@ body {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
     grid-template-areas:
-        "navbar navbar navbar" 
-        ". cost modal"
-        "calc1 calc1 calc1"
-        "calc2 calc2 calc2"
-        "craft craft craft";
+    "navbar navbar navbar" 
+    ". cost modal"
+    "calc1 calc1 calc1"
+    "calc2 calc2 calc2"
+    "craft craft craft";
 }
 
 #craft {
@@ -43,7 +39,7 @@ body {
     "iCellTwo iCellTwo iCellTwo iCellTwo iCellTwo"
     "iCellThree iCellThree iCellThree iCellThree iCellThree"
     "iBudget iBudget iBudget iBudget iBudget"
-    ". . calculateCraftCost . ."
+    ". . prodButton . ."
     ". craftResult craftResult craftResult .";
 }
 
@@ -56,7 +52,6 @@ body {
 }
 
 h1 {
-    text-align: center;
     margin-bottom: 50px;
 }
 
@@ -89,7 +84,11 @@ h1 {
     grid-area: ingredientBudget;
 }
 
-#result, #resultSelect {
+#prodButton {
+    grid-area: prodButton;
+}
+
+#result, #resultSelect, #possibleProd {
     font-weight: 600;
 }
 
@@ -103,26 +102,24 @@ h1 {
     margin-top: 5px;
 }
 
-.upgrades, #costModal {
+.calcSection, #costModal {
     background-color: cornflowerblue;
     border-radius: 3px;
     margin: 2px;
-    text-align: center;
 }
 
-.upgrades input {
+h1, input, .calcSection, #costModal, #closeModal {
     text-align: center;
 }
 
  /* Navbar */
 
- #indexNav {
+#indexNav {
     grid-area: indexNav;
 }
 
 #tocsNav {
     grid-area: tocsNav;
-    /* color: dimgray; */
 }
 
 .active {
@@ -165,7 +162,6 @@ h1 {
    color: #000000;
    font-size: 28px;
    font-weight: bold;
-   text-align: center;
  }
  
  #closeModal:hover,
@@ -174,7 +170,7 @@ h1 {
    text-decoration: none;
    cursor: pointer;
  } 
- 
+
 @media screen and (min-width : 600px) {
     .container {    
         display: grid;
@@ -200,7 +196,7 @@ h1 {
         ". . iCellTwo iCellTwo iCellTwo iCellTwo iCellTwo . ."
         ". . iCellThree iCellThree iCellThree iCellThree iCellThree . ."
         ". . iBudget iBudget iBudget iBudget iBudget . ."
-        ". . . . calculateCraftCost . . . ."
+        ". . . . prodButton . . . ."
         ". . . craftResult craftResult craftResult . . .";
     }
 
@@ -218,7 +214,7 @@ h1 {
             "navbar navbar navbar navbar navbar navbar navbar navbar navbar" 
             ". . . . cost . . . ."
             ". calc1 calc1 calc1 modal calc2 calc2 calc2 ."
-            ". . craft craft craft craft craft . .";
+            ". . . . craft . . . .";
     }
 
     #craft {
@@ -233,11 +229,21 @@ h1 {
         ". . . iCellTwo iCellTwo iCellTwo . . ."
         ". . . iCellThree iCellThree iCellThree . . ."
         ". . . iBudget iBudget iBudget . . ."
-        ". . . . calculateCraftCost . . . ."
+        ". . . . prodButton . . . ."
         ". . . craftResult craftResult craftResult . . .";
     }
 
     #iBudget {
-        margin-left: 1.6vw;
+        margin-left: 1.7vw;
     }
 }
+
+/* #test {
+    grid-area: test;
+ } */
+
+ /* label {
+    display: inline-block;
+    width: 200px;
+    text-align: right;
+  } */

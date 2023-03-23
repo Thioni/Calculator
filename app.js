@@ -1,3 +1,12 @@
+// Navbar
+
+let navbarElements = navbar.children;
+let tocsNav = document.getElementById("tocsNav");
+
+tocsNav.onclick = function(event) {
+  location.href = "tocs3.html";
+  }
+
 // Define the base cost of an upgrade
 
 let baseInput = document.getElementById('baseCost').value;
@@ -54,23 +63,9 @@ calculateSelection.addEventListener('click', function() {
   calculateSelect();
 });
 
-// Navbar testing
-
-let navbarElements = navbar.children;
-let tocsNav = document.getElementById("tocsNav");
-
-tocsNav.onclick = function(event) {
-  location.href = "tocs3.html";
-  }
-
-// Modal testing
+// Modal
 
 let modal = document.getElementById("costModal");
-// let closeModal = document.getElementById("closeModal");
-
-// closeModal.onclick = function() {
-//   modal.style.display = "none";
-// }
 
 window.onclick = function(event) {
   if (event.target == modal || event.target.tagName.toLowerCase() == "input" ) {
