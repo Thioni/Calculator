@@ -1,32 +1,26 @@
 let indexNav = document.getElementById("indexNav");
 
 indexNav.onclick = function(event) {
-    location.href = "index.html";
+    location.href = "general.html";
     }
 
 // Assignation des valeurs de base
-let costA = document.getElementById('costA').value;
-let costB = document.getElementById('costB').value;
-let costC = document.getElementById('costC').value;
+let ingredientA = document.getElementsByName('ingredientA')[0];
+let ingredientB = document.getElementsByName('ingredientB')[0];
+let ingredientC = document.getElementsByName('ingredientC')[0];
 let totalBudget = document.getElementById('totalBudget').value;
 let prodButton = document.getElementById('prodButton');
 
-// Calcul du nombre maximal de produits que l'on peut fabriquer 
-//(chaque produit utilise pour l'instant 1 seule unité de chaque ingrédient)
+// Fonction qui calcule le nombre maximal de produits qu'on peut fabriquer
 function calculateProd() {
-    let maxProducts = Math.min(Math.floor(totalBudget / (parseInt(costA) + parseInt(costB) + parseInt(costC))));
-    console.log(costA)
-    console.log(costB)
-    console.log(costC)
-    console.log(totalBudget)
-    console.log(maxProducts)
-    possibleProd.textContent = maxProducts
+  let costA = ingredientA.checked ? parseInt(ingredientA.value) : 0;
+  let costB = ingredientB.checked ? parseInt(ingredientB.value) : 0;
+  let costC = ingredientC.checked ? parseInt(ingredientC.value) : 0;
+  let maxProducts = Math.min(Math.floor(totalBudget / (costA + costB + costC)));
+  possibleProd.textContent = maxProducts;
 }
 
 prodButton.addEventListener('click', function() {
-    costA = document.getElementById('costA').value;
-    costB = document.getElementById('costB').value;
-    costC = document.getElementById('costC').value;
-    totalBudget = document.getElementById('totalBudget').value;
-    calculateProd();
-  });
+  totalBudget = document.getElementById('totalBudget').value;
+  calculateProd();
+});

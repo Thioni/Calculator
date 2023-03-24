@@ -10,50 +10,43 @@
 
 <body>
     <h1>CRAFT COST CALCULATOR</h1>
-    <div class="container" id="test">
+    <div class="recipeContainer">
 
-        <div id="navbar">
-            <span id="indexNav" class="inactive">Index</span>
+        <nav id="navbar">
+            <span id="indexNav" class="inactive">General</span>
             <span id="tocsNav" class="active">Trails</span>
-        </div>
+        </nav>
 
-        <form class="calcSection" id="craft">
-            <div id="craftTitle" class="statement">Production maximale</div>
-            <div id="iCellOne">
-              <label for="costA">Ingredient 1: </label>
-              <input type="number" id="costA" name="costA" value="10"></input>
-            </div>
-            <div id="iCellTwo">
-              <label for="costB">Ingredient 2: </label>
-              <input type="number" id="costB" name="costB" value="20"></input>
-            </div>
-            <div id="iCellThree">
-              <label for="costC">Ingredient 3: </label>
-              <input type="number" id="costC" name="costC" value="40"></input>
-            </div>
-            <div id="iBudget">
-              <label for="totalBudget">Budget: </label>
-              <input type="number" id="totalBudget" name="totalBudget" value="1000"></input>
-            </div>
-            <button id="prodButton" type="button">Calculer</button>
-            <div id="craftResult">
-              <span> Production possible: </span>
-              <span id="possibleProd"> 0 </span>
-            </div>
-        </form>
-
-
-        <!-- <form class="calcSection" id="test">
+        <form class="calcSection" id="recipe">
           <div id="craftTitle" class="statement">Production maximale</div>
-          <label for="costA">Coût de l'ingrédient A :</label>
-          <input type="number" id="costA" name="costA" required><br>
+          
+          <div>
+            <label for="ingredientA">Mature cheese:</label>
+            <input type="checkbox" id="ingredientA" name="ingredientA" value="40">
+          </div>
+          
+          <div>
+            <label for="ingredientB">Flaky potato:</label>
+            <input type="checkbox" id="ingredientB" name="ingredientB" value="40">
+          </div>
+          
+          <div>
+            <label for="ingredientC">Coarse Rock Salt:</label>
+            <input type="checkbox" id="ingredientC" name="ingredientC" value="20">
+          </div>
             
-          <label for="budget">Budget total :</label>
-          <input type="number" id="budget" name="budget" required><br>
-      
-          <button type="submit">Calculer</button>
-        </form> -->
-
+          <div>
+            <label for="totalBudget">Budget total :</label>
+            <input type="number" id="totalBudget" name="totalBudget" value="1000">
+          </div>
+        
+          <button id="prodButton" type="button">Calculer</button>
+          
+          <div id="craftResult">
+            <span> Production possible: </span>
+            <span id="possibleProd"> 0 </span>
+          </div>
+        </form>
         
     </div>
 
