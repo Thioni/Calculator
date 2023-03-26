@@ -12,7 +12,7 @@ tocsNav.onclick = function(event) {
 let baseInput = document.getElementById('baseCost').value;
 let costStatement = document.getElementById('costStatement')
 
-function changeCost() {
+const changeCost = () => {
   baseInput = parseInt(document.getElementById('baseCost').value);
   costStatement.textContent = `Coût de base ${baseInput} + ${baseInput} par upgrade`
   calculateSpent();
@@ -29,12 +29,12 @@ defineCost.addEventListener('click', function() {
 let spent = 0;
 let triesInput = document.getElementById('tries').value;
 
-function calculateSpent() {
+const calculateSpent = () => {
   spent = 0;
   for (let i = 1; i <= triesInput; i++) {
     spent += i * baseInput;
   }
-  result.textContent = spent;
+  resultLinear.textContent = spent;
 }
 
 tries.addEventListener('input', function() {
@@ -49,7 +49,7 @@ let startingInput = document.getElementById('startingTry');
 let endingInput = document.getElementById('endingTry');
 let calculateSelection = document.getElementById('calculateSelection');
 
-function calculateSelect() {
+const calculateSelect = () => {
   let startingTry = parseInt(startingInput.value);
   let endingTry = parseInt(endingInput.value);
   spentSelect = 0;

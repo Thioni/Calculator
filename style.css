@@ -21,6 +21,7 @@ body {
     grid-template-rows: auto;
     grid-template-areas:
     "navbar navbar navbar" 
+    "recipeChoice recipeChoice recipeChoice"
     "recipe recipe recipe";
 }
 
@@ -108,7 +109,7 @@ h1 {
     text-align: right;
 }
 
-#result, #resultSelect, #possibleProd {
+.result {
     font-weight: 600;
 }
 
@@ -136,6 +137,10 @@ h1, input, .calcSection, #costModal, #closeModal {
 
 #indexNav {
     grid-area: indexNav;
+}
+
+#recipeChoice {
+    grid-area: recipeChoice;
 }
 
 #tocsNav {
@@ -243,6 +248,7 @@ h1, input, .calcSection, #costModal, #closeModal {
         grid-template-rows: auto;
         grid-template-areas:
         "navbar navbar navbar navbar navbar" 
+        ". recipeChoice recipeChoice recipeChoice ."
         ". recipe recipe recipe .";
     }
 }
@@ -298,6 +304,7 @@ h1, input, .calcSection, #costModal, #closeModal {
         grid-template-rows: auto;
         grid-template-areas:
         "navbar navbar navbar navbar navbar navbar navbar navbar navbar" 
+        ". . . recipeChoice recipeChoice recipeChoice . . ."
         ". . . recipe recipe recipe . . .";
     }
 }
