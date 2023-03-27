@@ -87,28 +87,52 @@ prodButton.addEventListener('click', function() {
 // Menu déroulant pour choisir directement une recette
 
 const recipeCosts = {
-  recipe1: ingredients.matureCheese+ingredients.flakyPotato+ingredients.coarseRockSalt,
-  recipe2: 1,
-  recipe3: 1,
-  recipe4: 1,
-  recipe5: 1,
-  recipe6: 1,
-  recipe7: 1,
-  recipe8: 1,
-  recipe9: 1,
-  recipe10: 1,
-  recipe11: 1,
-  recipe12: 1,
-  recipe13: 1,
-  recipe14: 1,
-  recipe15: 1,
-  recipe16: 1,
-  recipe17: 1,
-  recipe18: 1,
-  recipe19: 1,
-  recipe20: 1,
-  recipe21: 1,
-  recipe22: 1
+  chunkyPotatoSalad: ingredients.matureCheese+ingredients.flakyPotato+ingredients.coarseRockSalt,
+  piledOnionRings: ingredients.freshEgg+ingredients.crispOnion+ingredients.assortedGrains
+  +ingredients.chitinousShell,
+  fluffyChiffonCake: ingredients.freshMilk+ingredients.honeySyrup+ingredients.assortedGrains
+  +ingredients.heartyPowder,
+  southernPunch: ingredients.starberry+ingredients.acerbicTomato+ingredients.honeySyrup
+  +ingredients.clearGelatin,
+  heartyWhiteStew: ingredients.freshMilk+ingredients.freshHerb+ingredients.flakyPotato
+  +ingredients.coarseRockSalt+ingredients.healthyLiquor+ingredients.beastFlesh,
+  juicyHamSandwich: ingredients.matureCheese+ingredients.coarseRockSalt+ingredients.assortedGrains
+  +ingredients.beastFlesh,
+  freshTomatoNoodles: ingredients.acerbicTomato+ingredients.assortedGrains+ingredients.healthyLiquor
+  +ingredients.chitinousShell+ingredients.clearGelatin,
+  dragonFriedRice: ingredients.freshHerb+ingredients.crispOnion+ingredients.coarseRockSalt
+  +ingredients.assortedGrains+ingredients.globbyFat+ingredients.heartyPowder,
+  cafeMacchiato: ingredients.freshHerb+ingredients.assortedGrains+ingredients.globbyFat,
+  honeyBagel: ingredients.freshEgg+ingredients.freshMilk+ingredients.starberry
+  +ingredients.honeySyrup+ingredients.chitinousShell+ingredients.heartyPowder,
+  thickHamburgerSteak: ingredients.freshEgg+ingredients.crispOnion+ingredients.beastFlesh
+  +ingredients.chitinousShell,
+  colorfulBouillabaisse: ingredients.acerbicTomato+ingredients.healthyLiquor+ingredients.beastFlesh
+  +ingredients.chitinousShell+ingredients.globbyFat,
+  fishermansPaella: ingredients.matureCheese+ingredients.coarseRockSalt+ingredients.assortedGrains
+  +ingredients.beastFlesh+ingredients.heartyPowder,
+  purpleHearts: ingredients.starberry+ingredients.honeySyrup+ingredients.healthyLiquor
+  +ingredients.clearGelatin+ingredients.heartyPowder,
+  heavyMeatPie: ingredients.freshEgg+ingredients.crispOnion+ingredients.flakyPotato
+  +ingredients.assortedGrains+ingredients.beastFlesh+ingredients.chitinousShell,
+  aquamarineIceCream: ingredients.freshMilk+ingredients.starberry+ingredients.honeySyrup
+  +ingredients.clearGelatin+ingredients.globbyFat,
+  pastaPeperoncino: ingredients.matureCheese+ingredients.freshHerb+ingredients.coarseRockSalt
+  +ingredients.beastFlesh+ingredients.heartyPowder,
+  tomatoCurry: ingredients.flakyPotato+ingredients.acerbicTomato+ingredients.healthyLiquor
+  +ingredients.beastFlesh+ingredients.globbyFat,
+  whiteVelvetShortcake: ingredients.freshMilk+ingredients.starberry+ingredients.honeySyrup
+  +ingredients.assortedGrains+ingredients.clearGelatin+ingredients.globbyFat
+  +ingredients.heartyPowder,
+  croquetteBurger: ingredients.freshEgg+ingredients.matureCheese+ingredients.crispOnion
+  +ingredients.flakyPotato+ingredients.assortedGrains+ingredients.beastFlesh
+  +ingredients.chitinousShell+ingredients.clearGelatin,
+  septettoTea: ingredients.freshHerb+ingredients.starberry+ingredients.honeySyrup
+  +ingredients.healthyLiquor+ingredients.chitinousShell+ingredients.clearGelatin
+  +ingredients.globbyFat+ingredients.heartyPowder,
+  heartyKebab: ingredients.freshHerb+ingredients.acerbicTomato+ingredients.coarseRockSalt
+  +ingredients.beastFlesh+ingredients.chitinousShell+ingredients.clearGelatin
+  +ingredients.globbyFat+ingredients.heartyPowder
 };
 
 let recipeSelect = document.getElementById('recipeSelect');

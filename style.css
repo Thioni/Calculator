@@ -3,44 +3,6 @@ body {
     margin:0;
 }
 
-.craftContainer {    
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
-    grid-template-areas:
-    "navbar navbar navbar" 
-    ". cost modal"
-    "calc1 calc1 calc1"
-    "calc2 calc2 calc2"
-    "craft craft craft";
-}
-
-.recipeContainer {    
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
-    grid-template-areas:
-    "navbar navbar navbar" 
-    "recipeChoice recipeChoice recipeChoice"
-    "recipe recipe recipe";
-}
-
-#craft {
-    grid-area: craft;
-    display: grid;
-    width: auto;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: auto;
-    grid-template-areas:
-    "craftTitle craftTitle craftTitle craftTitle craftTitle" 
-    "iCellOne iCellOne iCellOne iCellOne iCellOne"
-    "iCellTwo iCellTwo iCellTwo iCellTwo iCellTwo"
-    "iCellThree iCellThree iCellThree iCellThree iCellThree"
-    "iBudget iBudget iBudget iBudget iBudget"
-    ". . prodButton . ."
-    ". craftResult craftResult craftResult .";
-}
-
 #calc1 {
     grid-area: calc1;
 }
@@ -52,7 +14,6 @@ body {
 #cost {
     grid-area: cost;
 }
-
 
 #craftTitle {
     grid-area: craftTitle;
@@ -174,27 +135,65 @@ h1, input, .calcSection, #costModal, #closeModal {
    display: none;
    background-color: rgba(216, 91, 19, 0.904);
    grid-area: modal;
- }
+}
  
- .modal-content {
+.modal-content {
    color: white;
    display: flex;
    justify-content: center;
    margin-top: 5px;
- }
+}
  
- #closeModal {
+#closeModal {
    color: #000000;
    font-size: 28px;
    font-weight: bold;
- }
+}
  
- #closeModal:hover,
- #closeModal:focus {
+#closeModal:hover,
+#closeModal:focus {
    color: black;
    text-decoration: none;
    cursor: pointer;
- } 
+}
+ 
+.craftContainer {    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+    "navbar navbar navbar" 
+    ". cost modal"
+    "calc1 calc1 calc1"
+    "calc2 calc2 calc2"
+    "craft craft craft";
+}
+
+.recipeContainer {    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+    "navbar navbar navbar" 
+    "recipeChoice recipeChoice recipeChoice"
+    "recipe recipe recipe";
+}
+
+#craft {
+    grid-area: craft;
+    display: grid;
+    width: auto;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+    "craftTitle craftTitle craftTitle craftTitle craftTitle" 
+    "iCellOne iCellOne iCellOne iCellOne iCellOne"
+    "iCellTwo iCellTwo iCellTwo iCellTwo iCellTwo"
+    "iCellThree iCellThree iCellThree iCellThree iCellThree"
+    "iBudget iBudget iBudget iBudget iBudget"
+    ". . prodButton . ."
+    ". craftResult craftResult craftResult .";
+}
 
 @media screen and (min-width : 600px) {
     #navbar {
