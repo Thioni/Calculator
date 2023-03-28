@@ -1,7 +1,7 @@
 let indexNav = document.getElementById("indexNav");
 
 indexNav.onclick = function(event) {
-    location.href = "general.html";
+    location.href = "index.html";
     }
 
 // Assignation des valeurs de base
@@ -144,6 +144,10 @@ const calculateCost = () => {
   let recipe = recipeSelect.value;
   let cost = recipeCosts[recipe];
   let units = parseInt(unitsInput.value);
+  if (!/^[0-9]+$/.test(unitsInput.value)) {
+    alert("Vous devez renseigner des caratères numériques");
+    return;
+  }
   let productionCost = cost * units;
   totalCost.textContent = productionCost;
 }

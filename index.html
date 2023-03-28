@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>Cost calculator</title>
+  <title>General Cost calculator</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
@@ -19,13 +19,14 @@
 
       <div class="calcSection" id="cost">
         <div class="statement">Coût de base</div>
-        <input type="number" id="baseCost" name="baseCost" value="10"></input>
+        <input type="number" id="baseCost" name="baseCost" min="1" value="10"></input>
         <button id="defineCost" type="button">Modifier</button>
       </div>
       <div class="calcSection" id="calc1">
-          <div class="statement" id="costStatement">Coût de base 10 + 10 par upgrade</div>
+          <div class="statement" id="costStatement">Le coût augmente de 10 par upgrade</div>
           <label for="tries">Nombre d'upgrades: </label>
-          <input id="tries" name="tries"></input>
+          <input type="number" id="tries" name="tries" min="1" value="1"></input>
+          <button id="calculateTotal" type="button">Calculer</button>
             <div id="totalCost">
               <span> Coût total: </span>
               <span id="resultLinear" class="result"> 0 </span>
@@ -35,9 +36,9 @@
       <div class="calcSection" id="calc2">
           <div class="statement">Coût pour une tranche donnée</div>
           <label for="startingTry">Point de départ: </label>
-          <input type="number" id="startingTry" name="startingTry" value="1"></input>
+          <input type="number" id="startingTry" name="startingTry" min="1" value="1"></input>
           <label for="endingTry">Fin: </label>
-          <input type="number" id="endingTry" name="endingTry" value="2"></input>
+          <input type="number" id="endingTry" name="endingTry" min="1" value="2"></input>
           <button id="calculateSelection" type="button">Calculer</button>
             <div id="selectCost">
               <span> Coût total: </span>
