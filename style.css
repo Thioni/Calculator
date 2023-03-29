@@ -140,8 +140,16 @@ h1, input, .calcSection, #costModal, #closeModal {
 .modal-content {
    color: white;
    display: flex;
+   font-size: 0.9rem;
    justify-content: center;
-   margin-top: 5px;
+   margin-top: 10px;
+}
+
+#modalOff {
+    grid-area: modal;
+    background-color: #000000;
+    border-radius: 3px;
+    margin: 2px;
 }
  
 #closeModal {

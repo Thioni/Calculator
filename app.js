@@ -22,6 +22,7 @@ const changeCost = () => {
   calculateSpent();
   calculateSelect();
   modal.style.display = "block";
+  modalOff.style.display ="none";
 }
 
 defineCost.addEventListener('click', function() {
@@ -81,9 +82,11 @@ calculateSelection.addEventListener('click', function() {
 // Modal
 
 let modal = document.getElementById("costModal");
+let modalOff = document.getElementById("modalOff");
 
 window.onclick = function(event) {
   if (event.target == modal || event.target.tagName.toLowerCase() == "input" ) {
     modal.style.display = "none";
+    modalOff.style.display ="block";
   }
 }
