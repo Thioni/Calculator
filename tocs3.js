@@ -139,6 +139,7 @@ let recipeSelect = document.getElementById('recipeSelect');
 let unitsInput = document.getElementById('units');
 let recipeButton = document.getElementById('recipeButton');
 let totalCost = document.getElementById('totalCost');
+let uniqueDish = document.getElementById('uniqueDish');
 
 const calculateCost = () => {
   let recipe = recipeSelect.value;
@@ -150,6 +151,11 @@ const calculateCost = () => {
   }
   let productionCost = cost * units;
   totalCost.textContent = productionCost;
+  if (["chunkyPotatoSalad", "heavyMeatPie"].includes(recipeSelect.value)) {
+    uniqueDish.textContent = "Juna";
+  } else {
+    uniqueDish.textContent = "--";
+  }
 }
 
 recipeButton.addEventListener('click', function() {
