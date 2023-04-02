@@ -7,8 +7,7 @@ tocsNav.onclick = function(event) {
   location.href = "tocs3.html";
   }
 
-// Define the base cost of an upgrade
-
+// Definie le coût de base d'un upgrade
 let baseInput = document.getElementById('baseCost');
 let costStatement = document.getElementById('costStatement')
 
@@ -29,8 +28,7 @@ defineCost.addEventListener('click', function() {
   changeCost();
 });
 
-// Calculate the total cost from 0
-
+// Calcul le coût total en partant de 0
 let spent = 0;
 let triesInput = document.getElementById('tries');
 let calculateTotal = document.getElementById('calculateTotal');
@@ -53,8 +51,7 @@ calculateTotal.addEventListener('click', function() {
   calculateSpent();
 });
 
-// Calculate the cost for a chosen selection
-
+// Calcul d'une tranche de progression donnée
 let spentSelect = 0;
 let startingInput = document.getElementById('startingTry');
 let endingInput = document.getElementById('endingTry');
@@ -80,7 +77,6 @@ calculateSelection.addEventListener('click', function() {
 });
 
 // Modal
-
 let modal = document.getElementById("costModal");
 let modalOff = document.getElementById("modalOff");
 

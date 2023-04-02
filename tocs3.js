@@ -4,8 +4,6 @@ indexNav.onclick = function(event) {
     location.href = "index.html";
     }
 
-// Assignation des valeurs de base
-
 let ingredientA = document.querySelector('#ingredientA');
 let ingredientB = document.querySelector('#ingredientB');
 let ingredientC = document.querySelector('#ingredientC');
@@ -24,6 +22,7 @@ let ingredientO = document.querySelector('#ingredientO');
 let ingredientP = document.querySelector('#ingredientP');
 let ingredientQ = document.querySelector('#ingredientQ');
 
+// Coût unitaire des ingrédients
 const ingredients = {
   freshEgg: 40,
   freshMilk: 40,
@@ -52,7 +51,6 @@ let totalBudget = document.getElementById('totalBudget').value;
 let prodButton = document.getElementById('prodButton');
 
 // Fonction qui calcule le nombre maximal de produits qu'on peut fabriquer
-
 const calculateProd = () => {
   let costA = ingredientA.checked ? ingredients.freshEgg : 0;
   let costB = ingredientB.checked ? ingredients.freshMilk : 0;
@@ -84,8 +82,10 @@ prodButton.addEventListener('click', function() {
   calculateProd();
 });
 
-// Menu déroulant pour choisir directement une recette
+// Donne le coût production du nombre de plats de la recette choisie
+// et le personnage pouvant cuisiner un plat "unique"
 
+// Liste des recettes avec les ingrédients requis
 const recipeCosts = {
   chunkyPotatoSalad: ingredients.matureCheese+ingredients.flakyPotato+ingredients.coarseRockSalt,
   piledOnionRings: ingredients.freshEgg+ingredients.crispOnion+ingredients.assortedGrains
@@ -141,6 +141,7 @@ let recipeButton = document.getElementById('recipeButton');
 let totalCost = document.getElementById('totalCost');
 let uniqueDish = document.getElementById('uniqueDish');
 
+// Calcul du coût de la production
 const calculateCost = () => {
   let recipe = recipeSelect.value;
   let cost = recipeCosts[recipe];
@@ -151,11 +152,67 @@ const calculateCost = () => {
   }
   let productionCost = cost * units;
   totalCost.textContent = productionCost;
-  if (["chunkyPotatoSalad", "heavyMeatPie"].includes(recipeSelect.value)) {
-    uniqueDish.textContent = "Juna";
-  } else {
-    uniqueDish.textContent = "--";
+  // vérifie ici la valeur du select et change la valeur de uniqueDish en conséquence
+  switch (recipeSelect.value) {
+    case "chunkyPotatoSalad":
+    case "heavyMeatPie":
+      uniqueDish.textContent = "Juna";
+      break;
+    case "piledOnionRings":
+      uniqueDish.textContent = "Elliot";
+      break;
+    case "fluffyChiffonCake":
+      uniqueDish.textContent = "Fie";
+      break;
+    case "southernPunch":
+    case "pastaPeperoncino":
+      uniqueDish.textContent = "Rean";
+      break;
+    case "heartyWhiteStew":
+      uniqueDish.textContent = "Laura";
+      break;
+    case "juicyHamSandwich":
+    case "septettoTea":
+      uniqueDish.textContent = "Kurt";
+      break;
+    case "freshTomatoNoodles":
+      uniqueDish.textContent = "Alisa";
+      break;
+    case "dragonFriedRice":
+      uniqueDish.textContent = "Machias";
+      break;
+    case "cafeMacchiato":
+    case "whiteVelvetShortcake":
+      uniqueDish.textContent = "Altina";
+      break;
+    case "honeyBagel":
+      uniqueDish.textContent = "Emma";
+      break;
+    case "thickHamburgerSteak":
+    case "croquetteBurger":
+      uniqueDish.textContent = "Ash";
+      break;
+    case "colorfulBouillabaisse":
+      uniqueDish.textContent = "Millium";
+      break;
+    case "fishermansPaella":
+      uniqueDish.textContent = "Sara";
+      break;
+    case "purpleHearts":
+      uniqueDish.textContent = "Jusis";
+      break;
+    case "aquamarineIceCream":
+    case "tomatoCurry":
+      uniqueDish.textContent = "Musse";
+      break;
+    case "heartyKebab":
+      uniqueDish.textContent = "Gaius";
+      break;
+    default:
+      uniqueDish.textContent = "--";
+      break;
   }
+  
 }
 
 recipeButton.addEventListener('click', function() {
